@@ -10,6 +10,6 @@ x, y = digits.data[:-10], digits.target[:-10]
 # training
 classifier.fit(x, y)
 # manual testing
-print 'Prediction:', classifier.predict(digits.data[-4])
+print 'Prediction:', classifier.predict(digits.data[-4].reshape(1, -1))
 plt.imshow(digits.images[-4], cmap=plt.cm.gray_r, interpolation='nearest')
 plt.show()
